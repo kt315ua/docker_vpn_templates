@@ -1,0 +1,22 @@
+lcp-echo-interval 30
+lcp-echo-failure 4
+ipcp-accept-local
+ipcp-accept-remote
+refuse-pap
+refuse-eap
+refuse-chap
+refuse-mschap
+require-mschap-v2
+#require-mppe
+require-mppe-128
+noccp
+mtu 1450
+mru 1450
+noipdefault
+#nodefaultroute
+defaultroute
+replacedefaultroute
+usepeerdns
+connect-delay 5000
+noauth
+name "CHANGE_MY_NAME"

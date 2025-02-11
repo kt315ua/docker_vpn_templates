@@ -1,0 +1,14 @@
+[Unit]
+Description=Network manager for xl2tp:ppp0 interface
+After=network.target
+After=xl2tpd.service
+Wants=xl2tpd.service
+
+[Service]
+Type=simple
+ExecStart=/etc/ppp_manager.sh
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

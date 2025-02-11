@@ -1,0 +1,17 @@
+[Unit]
+Description=Setup xl2tp:ppp0 interface
+ConditionFileIsExecutable=/etc/ppp_setup.sh
+After=network.target
+After=xl2tpd.service
+Wants=xl2tpd.service
+
+[Service]
+Type=forking
+ExecStart=/etc/ppp_setup.sh start
+ExecStop=/etc/ppp_setup.sh stop
+TimeoutSec=0
+RemainAfterExit=yes
+GuessMainPID=no
+
+[Install]
+WantedBy=multi-user.target
