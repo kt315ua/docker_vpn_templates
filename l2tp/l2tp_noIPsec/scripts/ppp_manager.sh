@@ -165,8 +165,8 @@ stop_if_ppp() {
 
 restart_if_ppp() {
     LOG_INFO "Restarting ${PPP_IF} interface..."
-    ppp_if_down
-    ppp_if_up
+    stop_if_ppp
+    start_if_ppp
 }
 
 ctrl_c() {
